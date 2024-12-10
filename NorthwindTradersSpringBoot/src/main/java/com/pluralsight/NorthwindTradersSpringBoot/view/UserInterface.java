@@ -66,7 +66,8 @@ public class UserInterface {
     private void listProducts() {
         List<Product> products = simpleProduct.getAll();
         for (Product product : products) {
-            System.out.println(product);
+            System.out.printf("ID: %d, Name: %s, Category: %s, Price: %.2f%n",
+                    product.getProductId(), product.getName(), product.getCategory(), product.getPrice());
         }
     }
 }
